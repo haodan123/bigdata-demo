@@ -49,6 +49,7 @@
     background-size: cover;
 
     .main-container {
+      //padding-top: 100px;
       height: calc(100% - 100px);
       box-sizing: border-box;
       padding-bottom: 10px;
