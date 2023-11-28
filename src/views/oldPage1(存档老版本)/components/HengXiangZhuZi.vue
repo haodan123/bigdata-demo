@@ -3,30 +3,29 @@
     <div class="yearBox">
       2023年
     </div>
-    <div class="main-content" ref="containerRef" style="width: 100%;height: 100%;"></div>
+    <div class="main-content" ref="chartRef" style="width: 100%;height: 100%;"></div>
   </div>
 </template>
 
 <script setup>
-  import {
-    onMounted
-  } from 'vue'
-  import hooks from '@/hooks';
-  const {
-    useChart
-  } = hooks;
-  const {
-    chartInstance,
-    containerRef,
-    echarts
-  } = useChart()
+import {debounce} from '@/utils/index.js'
+import {markRaw, onMounted, onUnmounted, ref} from 'vue'
+import * as echarts from "echarts";
 
+const chartRef = ref()
+  const chartInstance = ref()
   onMounted(() => {
     initChart();
+    window.addEventListener("resize", screenAdapter);
+
+  })
+  onUnmounted(() => {
+    chartInstance.value.dispose()
+    window.removeEventListener("resize", screenAdapter);
   })
 
   const initChart = async () => {
-    chartInstance.value = echarts.init(containerRef.value)
+    chartInstance.value = markRaw(echarts.init(chartRef.value))
     const dataSource = [{
         value: '8',
         unit: '个',
@@ -300,6 +299,27 @@
     }
     chartInstance.value.setOption(dataOption)
   }
+
+  const screenAdapter = debounce(() => {
+    const titleFontSize = (chartRef.value.offsetWidth / 100) * 3.6;
+    // this.titleFontSize = titleFontSize;
+    const adapterOption = {
+      title: {
+        fontSize: titleFontSize,
+      },
+      // 图例的大小
+      legend: {
+        itemWidth: titleFontSize / 2,
+        itemHeight: titleFontSize / 2,
+        itemGap: titleFontSize / 2,
+
+        fontSize: titleFontSize / 2,
+        color: "#FFFFFF",
+      },
+    };
+    chartInstance.value.setOption(adapterOption);
+    chartInstance.value.resize();
+  })
 </script>
 
 <style scoped lang="scss">

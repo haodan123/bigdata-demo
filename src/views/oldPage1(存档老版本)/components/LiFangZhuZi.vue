@@ -4,7 +4,7 @@
       <div class="sgItem hgbg">黄精</div>
       <div class="sgItem ytbg">樱桃</div>
     </div>
-    <div class="main-content" ref="containerRef" style="width: 100%;height: 100%;"></div>
+    <div class="main-content" ref="chartRef" style="width: 100%;height: 100%;"></div>
   </div>
 </template>
 
@@ -14,25 +14,28 @@
     requestGet
   } from '@/api/index.js'
   import {
+    ref,
     markRaw,
-    onMounted
+    onMounted,
+    onUnmounted
   } from 'vue'
+  import {debounce} from '@/utils/index.js'
 
-  import hooks from '@/hooks';
-  const {
-    useChart
-  } = hooks;
-  const {
-    chartInstance,
-    containerRef,
-    echarts
-  } = useChart()
+  import * as echarts from "echarts";
+  const chartRef = ref()
+  const chartInstance = ref()
   onMounted(() => {
     initChart();
+    window.addEventListener("resize", screenAdapter);
+
+  })
+  onUnmounted(() => {
+    chartInstance.value.dispose()
+    window.removeEventListener("resize", screenAdapter);
   })
 
   const initChart = async () => {
-    chartInstance.value = markRaw(echarts.init(containerRef.value))
+    chartInstance.value =markRaw(echarts.init(chartRef.value)) 
     let data = {
       xAxisData: ["2016", "2017", "2018", "2019", "2020"],
       seriesData: [
@@ -258,6 +261,30 @@
 
     // chartInstance.value.setOption(dataOption)
   }
+
+  const screenAdapter = debounce(() => {
+    const titleFontSize = (chartRef.value.offsetWidth / 100) * 3.6;
+    // this.titleFontSize = titleFontSize;
+    const adapterOption = {
+      title: {
+        textStyle: {
+          fontSize: titleFontSize,
+        },
+      },
+      // 图例的大小
+      legend: {
+        itemWidth: titleFontSize / 2,
+        itemHeight: titleFontSize / 2,
+        itemGap: titleFontSize / 2,
+        textStyle: {
+          fontSize: titleFontSize / 2,
+          color: "#FFFFFF",
+        },
+      },
+    };
+    chartInstance.value.setOption(adapterOption);
+    chartInstance.value.resize();
+  })
 </script>
 
 <style scoped lang="scss">

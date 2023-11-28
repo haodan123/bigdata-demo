@@ -14,6 +14,7 @@
   import {
     onMounted,
   } from 'vue'
+  import * as echarts from "echarts";
   import chinaJson from '@/json/china.json'
   // import axios from "axios";
   // import biaodian from '@/assets/bama/chuanganqi.png'
@@ -24,8 +25,7 @@
   } = hooks;
   const {
     chartInstance,
-    containerRef,
-    echarts
+    containerRef
   } = useChart()
 
   onMounted(() => {
@@ -33,7 +33,7 @@
   })
 
   const initChart = async () => {
-    // console.log('ref', containerRef);
+    console.log('ref', containerRef);
     chartInstance.value = echarts.init(containerRef.value);
     // 获取中国地图的矢量数据
     // const res = await axios.get(`${mapUrl}/static/map/json/china.json`);

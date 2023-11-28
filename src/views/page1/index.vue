@@ -43,7 +43,7 @@
       </div>
     </div>
   </div>
-  
+
 
 </template>
 
@@ -56,7 +56,8 @@
   import LeiDaTu from './components/LeiDaTu.vue'
   import JianZhuZhuang from './components/JianZhuZhuang.vue'
   import HengXiangZhuZi from './components/HengXiangZhuZi.vue'
- 
+
+
 </script>
 
 <style scoped lang="scss">
