@@ -27,6 +27,7 @@ export default function () {
    * 处理屏幕尺寸变化
    */
   const handleResizeScreen = debounce(() => {
+    // console.log(window.innerHeight,window.innerWidth); //获取屏幕的宽高
     if (chartInstance.value) {
       chartInstance.value.resize();
     }

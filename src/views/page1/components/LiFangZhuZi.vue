@@ -14,7 +14,6 @@
     requestGet
   } from '@/api/index.js'
   import {
-    markRaw,
     onMounted
   } from 'vue'
 
@@ -32,7 +31,7 @@
   })
 
   const initChart = async () => {
-    chartInstance.value = markRaw(echarts.init(containerRef.value))
+    chartInstance.value = echarts.init(containerRef.value)
     let data = {
       xAxisData: ["2016", "2017", "2018", "2019", "2020"],
       seriesData: [
