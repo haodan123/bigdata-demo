@@ -14,9 +14,9 @@
           </boxContainer1>
         </div>
         <div class="h-1/3 w-full ">
-          <boxContainer1 boxTitle="标题">
+          <boxContainer2 boxTitle="标题">
             <HengXiangZhuZi></HengXiangZhuZi>
-          </boxContainer1>
+          </boxContainer2>
         </div>
       </div>
       <!-- 中 -->
@@ -50,6 +50,7 @@
 <script setup>
   import boxContainer from '@/components/boxContainer/index.vue';
   import boxContainer1 from '@/components/boxContainer-1/index.vue';
+  import boxContainer2 from '@/components/boxContainer-2/index.vue';
   import MapIndex from './components/MapIndex.vue'
   import TongJixinxi from './components/TongJixinxi.vue'
   import LiFangZhuZi from './components/LiFangZhuZi.vue'
