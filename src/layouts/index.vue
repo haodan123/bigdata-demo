@@ -45,7 +45,14 @@
     // height: 100%;
     height: 100vh;
     position: relative;
-    background: url('@/assets/ydj/bg02.png') center center no-repeat;
+    background: url('@/assets/bodybg/bg02.png') center center no-repeat; //默认背景 以下注释都能使用
+    // background: url('@/assets/bodybg/bg.jpg') center center no-repeat;
+    // background: url('@/assets/bodybg/bg1.png') center center no-repeat;
+    // background: url('@/assets/bodybg/bg2.png') center center no-repeat;
+    // background: url('@/assets/bodybg/dtt.png') center center no-repeat;
+    // background: url('@/assets/bodybg/newBg.jpg') center center no-repeat;
+    // background: url('@/assets/bodybg/homebg.jpg') center center no-repeat;
+    // background: url('@/assets/bodybg/ditu.jpg') center center no-repeat;
     background-size: cover;
 
     .main-container {

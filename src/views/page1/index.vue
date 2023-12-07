@@ -26,14 +26,14 @@
       <!-- 右 -->
       <div class="flex-1 flex flex-col gap-2 justify-between">
         <div class="h-1/3 w-full ">
-          <boxContainer boxTitle="标题">
+          <boxContainer3 boxTitle="标题">
             <JianZhuZhuang></JianZhuZhuang>
-          </boxContainer>
+          </boxContainer3>
         </div>
         <div class="h-1/3 w-full ">
-          <boxContainer boxTitle="标题">
+          <boxContainer3 boxTitle="标题">
             <LeiDaTu></LeiDaTu>
-          </boxContainer>
+          </boxContainer3>
         </div>
         <div class="h-1/3 w-full ">
           <boxContainer boxTitle="标题">
@@ -51,6 +51,7 @@
   import boxContainer from '@/components/boxContainer/index.vue';
   import boxContainer1 from '@/components/boxContainer-1/index.vue';
   import boxContainer2 from '@/components/boxContainer-2/index.vue';
+  import boxContainer3 from '@/components/boxContainer-3/index.vue';
   import MapIndex from './components/MapIndex.vue'
   import TongJixinxi from './components/TongJixinxi.vue'
   import LiFangZhuZi from './components/LiFangZhuZi.vue'

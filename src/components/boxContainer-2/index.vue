@@ -24,7 +24,11 @@
     width: 100%;
     height: 100%;
 
-    background-color: #22222F;
+    // background-color: #22222F;
+    background-color: rgba(0,0,0,0.3);
+    // background-color: #ffffff1a;
+    // background: rgb(255, 255, 255);
+    // background: linear-gradient(7deg, rgba(255, 255, 255, 0.3) 0%, rgba(137, 228, 247, 0.1) 100%);
     // padding: 8px;
     border-radius: 8px;
     border: 1px solid #56BDF9;

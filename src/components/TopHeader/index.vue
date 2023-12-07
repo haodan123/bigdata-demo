@@ -5,16 +5,6 @@
     <h1 class="text-mid">大数据模版</h1>
     <div class="title_left">{{ '' }}</div>
     <div class="posright">
-      <!-- <div class="right-item shouye title_button1 " @click="$router.push('/')" :class="name == 'ydj1' ? 'acitve' : ''">
-        首页
-      </div>
-      <div class="right-item">选择园区:</div>
-      <div class="right-item">
-        <select class="xiala1" name="" id="" @change="yuanqu" v-model="xiaValue" placeholder="请选择">
-          <option class="bgx" value="" disabled selected hidden>请选择</option>
-          <option class="bgx" v-for="(item) in yList" :key="item.id" :value="item.id">{{item.yname}}</option>
-        </select>
-      </div> -->
     </div>
   </div>
 </template>
@@ -26,9 +16,13 @@
 <style lang="scss" scoped>
   .top-header {
     position: relative;
-    background: url('@/assets/bama/header-bg.png') 0 0 / 100% 100% no-repeat;
+    background: url('@/assets/topheader/header-bg.png') 0 0 / 100% 100% no-repeat; //默认标题  以下的注释标题都是可用的
+    // background: url('@/assets/topheader/header.png') 0 0 / 100% 100% no-repeat; 
+    // background: url('@/assets/topheader/titlebg.jpg') 0 0 / 100% 100% no-repeat; 
+    // background: url('@/assets/topheader/titlebg2.png') 0 0 / 100% 100% no-repeat; 
+    // background: url('@/assets/topheader/titlebg3.png') 0 0 / 100% 100% no-repeat; 
+    // background: url('@/assets/topheader/homeTitle.jpg') 0 0 / 100% 100% no-repeat; 
     overflow: hidden;
-    // background-color: #1C1B29;
     width: 100%;
     height: 100px;
     display: flex;
