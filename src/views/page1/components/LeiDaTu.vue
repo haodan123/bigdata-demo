@@ -44,7 +44,7 @@
       })
 
     }
-    console.log(tdata);
+    // console.log(tdata);
     const initOption = {
       // color: ['#3D91F7', '#61BE67'],
       tooltip: {

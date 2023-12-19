@@ -5,7 +5,8 @@
       <div class="flex-1 flex flex-col gap-2 justify-between ">
         <div class="h-1/3 w-full ">
           <boxContainer boxTitle="标题">
-            <TongJixinxi></TongJixinxi>
+            <!-- 使用了封装组件的echarts -->
+            <TongJixinxi2></TongJixinxi2>
           </boxContainer>
         </div>
         <div class="h-1/3 w-full ">
@@ -54,12 +55,11 @@
   import boxContainer3 from '@/components/boxContainer-3/index.vue';
   import MapIndex from './components/MapIndex.vue'
   import TongJixinxi from './components/TongJixinxi.vue'
+  import TongJixinxi2 from './components/TongJixinxi2.vue'
   import LiFangZhuZi from './components/LiFangZhuZi.vue'
   import LeiDaTu from './components/LeiDaTu.vue'
   import JianZhuZhuang from './components/JianZhuZhuang.vue'
   import HengXiangZhuZi from './components/HengXiangZhuZi.vue'
-
-
 </script>
 
 <style scoped lang="scss">

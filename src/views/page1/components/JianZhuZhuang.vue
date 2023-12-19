@@ -61,11 +61,11 @@
             boundaryGap: true,
             data: ["一产", "二产", '三产'],
             axisLabel: {
-              textStyle: {
+              // textStyle: {
                 color: "#fff",
                 fontStyle: "normal",
                 fontSize: 12
-              }
+              // }
             },
             axisTick: {
               //坐标轴刻度相关设置。
@@ -91,11 +91,11 @@
             interval: 20,
             splitNumber: 3,
             axisLabel: {
-              textStyle: {
+              // textStyle: {
                 color: "#fff",
                 fontStyle: "normal",
                 fontSize: 12
-              }
+              // }
             },
             nameTextStyle: {
               color: "#fff",
@@ -121,12 +121,12 @@
             barWidth: "60%",
             stack: "总量",
             label: {
-              normal: {
+              // normal: {
                 show: false
-              }
+              // }
             },
             itemStyle: {
-              normal: {
+              // normal: {
                 color: {
                   type: "linear",
                   x: 0,
@@ -144,7 +144,7 @@
                   ],
                   globalCoord: false // 缺省为 false
                 } //渐变颜色
-              }
+              // }
             },
             symbol: "path://M12.000,-0.000 C12.000,-0.000 16.074,60.121 22.731,60.121 C26.173,60.121 -3.234,60.121 0.511,60.121 C7.072,60.121 12.000,-0.000 12.000,-0.000 Z",
 

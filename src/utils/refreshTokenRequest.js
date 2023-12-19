@@ -1,8 +1,8 @@
 import axios from 'axios'
-import {apiUrl} from '@/config/global_config'
+import { apiUrl } from '@/config/global_config'
+import refreshToken from './refreshToken'
 
-
- //前缀
+//前缀
 const service = axios.create({
   baseURL: apiUrl,
   timeout: 5000 // 请求超时时间
@@ -23,9 +23,10 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   response => {
     const data = response.data
-    // console.log(response);
     if (data.code === 200) {
       return Promise.resolve(data)
+    } if (data.code === 401) {
+      refreshToken(response)
     } else {
       let err = {}
       let messInfo = data.message ? err.info + ' ' + data.message : err.info

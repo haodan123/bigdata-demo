@@ -60,10 +60,8 @@
         right: '13%',
         // top: '7%',
         top: '17%',
-        textStyle: {
-          fontSize: 10,
-          color: '#fff'
-        },
+        fontSize: 10,
+        color: '#fff',
         itemHeight: 5,
         itemWidth: 12,
       },
@@ -101,11 +99,9 @@
           },
           axisLabel: {
             // margin: 20,
-            textStyle: {
-              // color: '#d1e6eb',
-              color: '#fff',
-              fontSize: 10,
-            },
+            // color: '#d1e6eb',
+            color: '#fff',
+            fontSize: 10,
           },
         },
         {
@@ -121,12 +117,9 @@
           },
           axisLabel: {
             // margin: 20,
-            textStyle: {
-              // color: '#d1e6eb',
-              color: '#fff',
-              fontSize: 10,
-
-            },
+            // color: '#d1e6eb',
+            color: '#fff',
+            fontSize: 10,
           },
         },
       ],

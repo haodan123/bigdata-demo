@@ -77,7 +77,7 @@
 
         div {
           width: 10px;
-          height: 2px;
+          height: 1px;
           background: #01a0e5;
         }
 

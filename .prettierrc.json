@@ -4,5 +4,25 @@
   "tabWidth": 2,
   "singleQuote": true,
   "printWidth": 100,
-  "trailingComma": "none"
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx","*.vue"],
+      "options": {
+        "overrides": [
+          {
+            "files": "*.?(js|jsx|ts|tsx|vue)",
+            "options": {
+              "semi": false,
+              "singleQuote": true,
+              "jsxSingleQuote": true,
+              "spaceBeforeFunctionParen": true,
+              "proseWrap": "never",
+              "arrowParens": "always"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

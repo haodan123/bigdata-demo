@@ -1,13 +1,11 @@
 <template>
   <div id="app">
-    <!-- <div class="bg-red-500">11</div> -->
     <routerView></routerView>
   </div>
 
 </template>
 
 <script setup>
-
 </script>
 
 <style scoped lang="scss">

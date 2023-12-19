@@ -17,7 +17,7 @@
   import chinaJson from '@/json/china.json'
   // import axios from "axios";
   // import biaodian from '@/assets/bama/chuanganqi.png'
-  import mapicon from '@/assets/liaoning/position.png';
+  import mapicon from '@/assets/chuanganqi/chongqing1.jpg';
   import hooks from '@/hooks';
   const {
     useChart
@@ -154,7 +154,7 @@
           return 30;
         },
         label: {
-          normal: {
+          // normal: {
             show: false,
             formatter: function (params) {
               // console.log(params);
@@ -162,18 +162,18 @@
             },
             position: 'right',
             color: '#fff',
-            fontSize: '8'
-          },
-          emphasis: {
-            show: false
-          }
+            fontSize: '8',
+          // },
+          // emphasis: {
+            // show: false
+          // }
         },
         itemStyle: {
-          normal: {
+          // normal: {
             color: '#4bbbb2',
             borderWidth: 2,
             borderColor: '#b4dccd'
-          }
+          // }
         }
       }, ]
     };
@@ -188,9 +188,9 @@
     const {
       data: res
     } = await requestPost(`mapdis2`, {})
-    requestPost
+    // requestPost
     const resData = []
-    res.data.forEach(item => {
+    res.forEach(item => {
       let obj = {}
       obj.value = [item.jid, item.wid]
       obj = {
@@ -201,13 +201,13 @@
         resData.push(obj)
       }
     })
-    console.log('resdata', resData);
+    // console.log('resdata', resData);
     // 对数据进行赋值
     updateChart(resData);
   }
 
   const updateChart = (resData) => {
-    console.log('地图', resData);
+    // console.log('地图', resData);
     const dataOption = {
       series: [{
         data: resData
